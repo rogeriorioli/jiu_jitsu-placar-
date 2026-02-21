@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Placar Jiu-Jitsu - Controle</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+</head>
+<body class="controle-body">
+  <div class="top-actions">
+    <h1>Controle do Placar</h1>
+    <button id="btn-open-display" class="btn btn-outline" title="Abrir Tela de Exibição">
+      <span class="material-symbols-outlined">desktop_windows</span>
+      Abrir Tela do Público
+    </button>
+  </div>
+
+  <div class="control-panel">
+    <!-- Atleta A -->
+    <div class="athlete-controls athlete-a">
+      <div class="athlete-header">
+        <input type="text" id="name-a" value="Atleta A" class="athlete-name-input" placeholder="Nome do Atleta" />
+        <div class="color-badge badge-white"></div>
+      </div>
+
+      <div class="score-section">
+        <h2 class="score-title text-yellow">Pontos</h2>
+        <div class="score-display" id="display-pts-a">0</div>
+        <div class="score-buttons">
+          <button class="btn btn-pts" onclick="addScore('a', 'points', 2)">+2</button>
+          <button class="btn btn-pts" onclick="addScore('a', 'points', 3)">+3</button>
+          <button class="btn btn-pts" onclick="addScore('a', 'points', 4)">+4</button>
+          <button class="btn btn-pts btn-sub" onclick="addScore('a', 'points', -1)">-1</button>
+        </div>
+      </div>
+
+      <div class="minor-scores">
+        <div class="score-section-small">
+          <h3 class="text-green">Vantagem</h3>
+          <div class="score-display-small" id="display-adv-a">0</div>
+          <div class="score-buttons-small">
+            <button class="btn btn-adv" onclick="addScore('a', 'advantages', 1)">+1</button>
+            <button class="btn btn-adv btn-sub" onclick="addScore('a', 'advantages', -1)">-1</button>
+          </div>
+        </div>
+
+        <div class="score-section-small">
+          <h3 class="text-red">Punição</h3>
+          <div class="score-display-small" id="display-pun-a">0</div>
+          <div class="score-buttons-small">
+            <button class="btn btn-pun" onclick="addScore('a', 'punishments', 1)">+1</button>
+            <button class="btn btn-pun btn-sub" onclick="addScore('a', 'punishments', -1)">-1</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Central Timer -->
+    <div class="timer-controls">
+      <div class="timer-container">
+        <div class="timer-display" id="control-timer">05:00</div>
+      </div>
+
+      <div class="timer-actions">
+        <button id="btn-start" class="btn btn-primary btn-large">
+          <span class="material-symbols-outlined">play_arrow</span>
+          START
+        </button>
+        <button id="btn-pause" class="btn btn-outline btn-large" style="display: none;">
+          <span class="material-symbols-outlined">pause</span>
+          PAUSE
+        </button>
+        
+        <div class="timer-set-buttons">
+          <button class="btn btn-secondary" onclick="setTimer(5 * 60)">5 MIN</button>
+          <button class="btn btn-secondary" onclick="setTimer(10 * 60)">10 MIN</button>
+        </div>
+      </div>
+
+      <div class="global-actions">
+        <button class="btn btn-danger btn-nova-luta" onclick="resetMatch()">
+          <span class="material-symbols-outlined">restart_alt</span>
+          Nova Luta / Limpar
+        </button>
+      </div>
+    </div>
+
+    <!-- Atleta B -->
+    <div class="athlete-controls athlete-b">
+      <div class="athlete-header" style="flex-direction: row-reverse;">
+        <input type="text" id="name-b" value="Atleta B" class="athlete-name-input" placeholder="Nome do Atleta" style="text-align: right;" />
+        <div class="color-badge badge-blue"></div>
+      </div>
+
+      <div class="score-section">
+        <h2 class="score-title text-yellow">Pontos</h2>
+        <div class="score-display" id="display-pts-b">0</div>
+        <div class="score-buttons">
+          <button class="btn btn-pts" onclick="addScore('b', 'points', 2)">+2</button>
+          <button class="btn btn-pts" onclick="addScore('b', 'points', 3)">+3</button>
+          <button class="btn btn-pts" onclick="addScore('b', 'points', 4)">+4</button>
+          <button class="btn btn-pts btn-sub" onclick="addScore('b', 'points', -1)">-1</button>
+        </div>
+      </div>
+
+      <div class="minor-scores" style="flex-direction: row-reverse;">
+        <div class="score-section-small">
+          <h3 class="text-green">Vantagem</h3>
+          <div class="score-display-small" id="display-adv-b">0</div>
+          <div class="score-buttons-small">
+            <button class="btn btn-adv" onclick="addScore('b', 'advantages', 1)">+1</button>
+            <button class="btn btn-adv btn-sub" onclick="addScore('b', 'advantages', -1)">-1</button>
+          </div>
+        </div>
+
+        <div class="score-section-small">
+          <h3 class="text-red">Punição</h3>
+          <div class="score-display-small" id="display-pun-b">0</div>
+          <div class="score-buttons-small">
+            <button class="btn btn-pun" onclick="addScore('b', 'punishments', 1)">+1</button>
+            <button class="btn btn-pun btn-sub" onclick="addScore('b', 'punishments', -1)">-1</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="control.js"></script>
+</body>
+</html>

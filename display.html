@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Placar Jiu-Jitsu - Exibição</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="display-body">
+
+  <div class="display-header">
+    <div class="display-athlete-name" id="display-name-a">Atleta A</div>
+
+    <div class="display-timer-wrapper">
+      <div class="display-timer" id="display-timer">05:00</div>
+    </div>
+
+    <div class="display-athlete-name" id="display-name-b" style="text-align: right;">Atleta B</div>
+  </div>
+
+  <div class="display-main">
+
+    <!-- Atleta A -->
+    <div class="display-athlete-card card-white">
+      <div class="display-points-wrapper">
+        <div class="display-points-title text-yellow">Pontos</div>
+        <div class="display-points text-yellow" id="display-pts-a">0</div>
+      </div>
+
+      <div class="display-minor-wrapper">
+        <div class="display-minor-box">
+          <div class="display-minor-title text-green">Vantagens</div>
+          <div class="display-minor-score text-green" id="display-adv-a">0</div>
+        </div>
+
+        <div class="display-minor-box">
+          <div class="display-minor-title text-red">Punições</div>
+          <div class="display-minor-score text-red" id="display-pun-a">0</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Atleta B -->
+    <div class="display-athlete-card card-blue">
+      <div class="display-points-wrapper">
+        <div class="display-points-title text-yellow">Pontos</div>
+        <div class="display-points text-yellow" id="display-pts-b">0</div>
+      </div>
+
+      <div class="display-minor-wrapper">
+        <div class="display-minor-box">
+          <div class="display-minor-title text-green">Vantagens</div>
+          <div class="display-minor-score text-green" id="display-adv-b">0</div>
+        </div>
+
+        <div class="display-minor-box">
+          <div class="display-minor-title text-red">Punições</div>
+          <div class="display-minor-score text-red" id="display-pun-b">0</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="display.js"></script>
+</body>
+
+</html>
