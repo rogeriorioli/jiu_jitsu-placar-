@@ -9,6 +9,19 @@ const defaultState = {
 
 let state = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY)) || Object.assign({}, defaultState);
 let timerInterval = null;
+let stateHistory = [];
+
+function saveToHistory() {
+  stateHistory.push(JSON.parse(JSON.stringify(state)));
+  if (stateHistory.length > 30) stateHistory.shift();
+}
+
+function undo() {
+  if (stateHistory.length > 0) {
+    state = stateHistory.pop();
+    saveState();
+  }
+}
 
 const elements = {
   a: {
@@ -63,6 +76,7 @@ function saveState() {
 }
 
 function addScore(athlete, type, amount) {
+  saveToHistory();
   state[athlete][type] += amount;
   if (state[athlete][type] < 0) state[athlete][type] = 0;
   saveState();
@@ -75,6 +89,7 @@ function setTimer(seconds) {
 }
 
 function resetMatch() {
+  saveToHistory();
   state = JSON.parse(JSON.stringify(defaultState));
   saveState();
 }

@@ -5,23 +5,23 @@
   --bg-card-hover: #334155;
   --text-main: #f8fafc;
   --text-muted: #94a3b8;
-  
+
   --color-yellow: #fbbf24;
   --color-green: #4ade80;
   --color-red: #ef4444;
   --color-blue: #3b82f6;
   --color-white: #ffffff;
-  
+
   --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
   --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
   --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
   --shadow-glow-yellow: 0 0 15px rgba(251, 191, 36, 0.3);
-  
+
   --round-sm: 8px;
   --round-md: 12px;
   --round-lg: 16px;
   --round-full: 9999px;
-  
+
   --transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -98,6 +98,7 @@ body {
   color: white;
   box-shadow: 0 4px 14px rgba(59, 130, 246, 0.4);
 }
+
 .btn-primary:hover {
   background: #2563eb;
   box-shadow: 0 6px 20px rgba(59, 130, 246, 0.6);
@@ -107,6 +108,7 @@ body {
   background: var(--bg-card);
   border: 1px solid var(--bg-card-hover);
 }
+
 .btn-secondary:hover {
   background: var(--bg-card-hover);
 }
@@ -116,6 +118,7 @@ body {
   color: white;
   box-shadow: 0 4px 14px rgba(239, 68, 68, 0.4);
 }
+
 .btn-danger:hover {
   background: #dc2626;
   box-shadow: 0 6px 20px rgba(239, 68, 68, 0.6);
@@ -162,6 +165,7 @@ body {
   outline: none;
   transition: var(--transition);
 }
+
 .athlete-name-input:focus {
   border-color: var(--color-blue);
 }
@@ -170,13 +174,21 @@ body {
   width: 24px;
   height: 24px;
   border-radius: 50%;
-  box-shadow: inset 0 2px 4px rgba(0,0,0,0.5);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.5);
 }
-.badge-white { background: #f8fafc; border: 2px solid #cbd5e1; }
-.badge-blue { background: #3b82f6; border: 2px solid #2563eb; }
+
+.badge-white {
+  background: #f8fafc;
+  border: 2px solid #cbd5e1;
+}
+
+.badge-blue {
+  background: #3b82f6;
+  border: 2px solid #2563eb;
+}
 
 .score-section {
-  background: rgba(0,0,0,0.2);
+  background: rgba(0, 0, 0, 0.2);
   border-radius: var(--round-md);
   padding: 1.25rem;
   text-align: center;
@@ -193,9 +205,17 @@ body {
   font-weight: 800;
 }
 
-.text-yellow { color: var(--color-yellow); }
-.text-green { color: var(--color-green); }
-.text-red { color: var(--color-red); }
+.text-yellow {
+  color: var(--color-yellow);
+}
+
+.text-green {
+  color: var(--color-green);
+}
+
+.text-red {
+  color: var(--color-red);
+}
 
 .score-display {
   font-size: 5rem;
@@ -218,6 +238,7 @@ body {
   border: 1px solid rgba(251, 191, 36, 0.3);
   padding: 0.5rem 1rem;
 }
+
 .btn-pts:hover {
   background: rgba(251, 191, 36, 0.2);
   border-color: var(--color-yellow);
@@ -228,6 +249,7 @@ body {
   color: var(--text-muted);
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
+
 .btn-sub:hover {
   background: rgba(255, 255, 255, 0.1);
   color: white;
@@ -240,7 +262,7 @@ body {
 
 .score-section-small {
   flex: 1;
-  background: rgba(0,0,0,0.2);
+  background: rgba(0, 0, 0, 0.2);
   border-radius: var(--round-md);
   padding: 1rem;
   text-align: center;
@@ -266,10 +288,25 @@ body {
   justify-content: center;
 }
 
-.btn-adv { background: rgba(74, 222, 128, 0.1); color: var(--color-green); border: 1px solid rgba(74, 222, 128, 0.3); }
-.btn-adv:hover { background: rgba(74, 222, 128, 0.2); }
-.btn-pun { background: rgba(239, 68, 68, 0.1); color: var(--color-red); border: 1px solid rgba(239, 68, 68, 0.3); }
-.btn-pun:hover { background: rgba(239, 68, 68, 0.2); }
+.btn-adv {
+  background: rgba(74, 222, 128, 0.1);
+  color: var(--color-green);
+  border: 1px solid rgba(74, 222, 128, 0.3);
+}
+
+.btn-adv:hover {
+  background: rgba(74, 222, 128, 0.2);
+}
+
+.btn-pun {
+  background: rgba(239, 68, 68, 0.1);
+  color: var(--color-red);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+.btn-pun:hover {
+  background: rgba(239, 68, 68, 0.2);
+}
 
 
 .timer-controls {
@@ -286,7 +323,7 @@ body {
   justify-content: center;
   align-items: center;
   border: 1px solid rgba(255, 255, 255, 0.05);
-  box-shadow: 0 0 40px rgba(0,0,0,0.5) inset;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.5) inset;
 }
 
 .timer-display {
@@ -295,7 +332,7 @@ body {
   font-variant-numeric: tabular-nums;
   letter-spacing: -2px;
   color: var(--text-main);
-  text-shadow: 0 4px 20px rgba(255,255,255,0.2);
+  text-shadow: 0 4px 20px rgba(255, 255, 255, 0.2);
 }
 
 .timer-actions {
@@ -308,6 +345,7 @@ body {
   display: flex;
   gap: 1rem;
 }
+
 .timer-set-buttons .btn {
   flex: 1;
 }
@@ -317,6 +355,7 @@ body {
   display: flex;
   flex-direction: column;
 }
+
 .btn-nova-luta {
   padding: 1.5rem;
   font-size: 1.25rem;
@@ -334,6 +373,7 @@ body {
   display: grid;
   grid-template-rows: auto 1fr;
   padding: 2vh;
+  height: 100vh;
 }
 
 .display-header {
@@ -363,12 +403,12 @@ body {
 }
 
 .display-timer {
-  font-size: 8vw;
+  font-size: 5vw;
   font-weight: 900;
   font-variant-numeric: tabular-nums;
   line-height: 1;
   color: #fff;
-  text-shadow: 0 0 20px rgba(255,255,255,0.3);
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
 }
 
 .display-main {
@@ -391,6 +431,7 @@ body {
 .card-white {
   border-top: 10px solid #f8fafc;
 }
+
 .card-blue {
   border-top: 10px solid #3b82f6;
 }
@@ -412,7 +453,7 @@ body {
 }
 
 .display-points {
-  font-size: 25vw;
+  font-size: 18vw;
   font-weight: 900;
   line-height: 1;
   color: var(--color-yellow);
@@ -422,28 +463,28 @@ body {
 .display-minor-wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-  margin-top: 2rem;
+  gap: 1.5rem;
+  margin-top: 1rem;
 }
 
 .display-minor-box {
-  background: rgba(255,255,255,0.03);
+  background: rgba(255, 255, 255, 0.03);
   border-radius: 1.5rem;
-  padding: 2rem 1rem;
+  padding: 1rem;
   text-align: center;
-  border: 1px solid rgba(255,255,255,0.05);
+  border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .display-minor-title {
-  font-size: 2vw;
+  font-size: 1.5vw;
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 2px;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .display-minor-score {
-  font-size: 10vw;
+  font-size: 5vw;
   font-weight: 900;
   line-height: 1;
 }
@@ -453,9 +494,17 @@ body {
 }
 
 @keyframes pulse {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.1); }
-  100% { transform: scale(1); }
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
 }
 
 @media (max-width: 1200px) {
