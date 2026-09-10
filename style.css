@@ -58,9 +58,7 @@ body {
 .top-actions h1 {
   font-size: 2rem;
   font-weight: 800;
-  background: linear-gradient(to right, #fbbf24, #f59e0b);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: var(--color-yellow);
 }
 
 .btn {
@@ -80,6 +78,11 @@ body {
 
 .btn:active {
   transform: scale(0.95);
+}
+
+.btn:focus-visible {
+  outline: 3px solid rgba(96, 165, 250, 0.9);
+  outline-offset: 3px;
 }
 
 .btn-outline {
@@ -348,6 +351,64 @@ body {
 
 .timer-set-buttons .btn {
   flex: 1;
+}
+
+.custom-timer-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding-top: 0.25rem;
+}
+
+.custom-timer-form label {
+  color: var(--text-main);
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+
+.custom-timer-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 0.75rem;
+}
+
+.custom-timer-input {
+  width: 100%;
+  min-width: 0;
+  border: 1px solid var(--bg-card-hover);
+  border-radius: var(--round-md);
+  outline: none;
+  background: rgba(0, 0, 0, 0.2);
+  color: var(--text-main);
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.custom-timer-input::placeholder {
+  color: var(--text-muted);
+}
+
+.custom-timer-input:focus-visible {
+  border-color: var(--color-blue);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.25);
+}
+
+.custom-timer-input[aria-invalid="true"] {
+  border-color: var(--color-red);
+}
+
+.custom-timer-message {
+  min-height: 1.25rem;
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  line-height: 1.25rem;
+}
+
+.custom-timer-message.is-error {
+  color: #fca5a5;
 }
 
 .global-actions {

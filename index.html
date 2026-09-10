@@ -79,6 +79,18 @@
           <button class="btn btn-secondary" onclick="setTimer(5 * 60)">5 MIN</button>
           <button class="btn btn-secondary" onclick="setTimer(10 * 60)">10 MIN</button>
         </div>
+
+        <form id="custom-timer-form" class="custom-timer-form" novalidate>
+          <label for="custom-timer">Tempo personalizado</label>
+          <div class="custom-timer-row">
+            <input id="custom-timer" class="custom-timer-input" type="text" inputmode="numeric"
+              autocomplete="off" maxlength="5" placeholder="MM:SS" aria-describedby="custom-timer-message" />
+            <button class="btn btn-secondary" type="submit">Definir</button>
+          </div>
+          <p id="custom-timer-message" class="custom-timer-message" aria-live="polite">
+            Informe de 00:01 a 99:59.
+          </p>
+        </form>
       </div>
 
       <div class="brand-logo"
